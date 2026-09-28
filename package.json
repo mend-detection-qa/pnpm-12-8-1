@@ -1,0 +1,9 @@
+{
+  "name": "workspace-peer-dep-injection-probe",
+  "version": "0.0.0",
+  "private": true,
+  "description": "pnpm 12.8.1 probe: peer dependency snapshot suffixes in v9 lockfile + workspace package injection",
+  "engines": {
+    "pnpm": ">=12.8.1"
+  }
+}
