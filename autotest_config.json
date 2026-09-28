@@ -1,6 +1,6 @@
 {
   "description": "Autotest configuration file for dependency tree detection validation",
-  "version": 1.12,
+  "version": 1.8,
   "base_config": {
     "validate_scan_output": true,
     "_comment_validate_scan_output": "Whether to validate the scan output/exit code. Options: true | false. Default: true",
@@ -25,30 +25,30 @@
       "check_update_request_sca_results": true,
       "_comment_check_update_request_sca_results": "Whether to validate extraProperties.scaResults from the update request. Parses scaResults as JSON and asserts: (1) totalFail is empty {}, (2) no results entry has level 'ERROR'. Options: true | false. Default: false",
       "expected_total_dependencies_number": {
-        "gte": 6
+        "gte": 10
       },
       "expected_direct_dependencies_number": {
         "eq": 2
       },
       "expected_transitive_dependencies_number": {
-        "gte": 4
+        "gte": 8
       },
       "_comment_expected_dependencies_number": "Optional. Expected number of dependencies with comparison operator. Operators: gt (>), gte (>=), lt (<), lte (<=), eq (==). If not provided, this check will not be performed.",
       "direct_dependencies_names_list": {
-        "eq": [
-          "@probe/app",
-          "@probe/ui"
+        "contains": [
+          "@probe/app-0.1.0.tgz",
+          "@probe/ui-0.1.0.tgz"
         ]
       },
       "transitive_dependencies_names_list": {
         "contains": [
-          "clsx",
-          "hono",
-          "js-tokens",
-          "loose-envify",
-          "react",
-          "react-dom",
-          "scheduler"
+          "clsx-2.1.1.tgz",
+          "hono-4.6.3.tgz",
+          "js-tokens-4.0.0.tgz",
+          "loose-envify-1.4.0.tgz",
+          "react-18.3.1.tgz",
+          "react-dom-18.3.1.tgz",
+          "scheduler-0.23.2.tgz"
         ]
       },
       "_comment_dependencies_names_list": "Optional. Check specific libraries in direct dependencies. Operators: eq (==), contains (all items from expected list in actual), in(all items from actual list in expected), nin(actual list does not contain provided libs). If not provided, this check will not be performed.",
