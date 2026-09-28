@@ -1,0 +1,186 @@
+{
+  "generated_at": "2026-09-28T00:00:00Z",
+  "packages": {
+    "@adobe/css-tools": {
+      "dependencies": [],
+      "group": "dev",
+      "optional": false,
+      "source": "registry",
+      "version": "4.4.1"
+    },
+    "@probe/app": {
+      "dependencies": [
+        "@probe/ui",
+        "hono",
+        "react",
+        "react-dom"
+      ],
+      "group": "main",
+      "optional": false,
+      "source": "local",
+      "source_detail": {
+        "workspace": "packages/app"
+      },
+      "version": "0.1.0"
+    },
+    "@probe/ui": {
+      "dependencies": [
+        "clsx",
+        "@testing-library/react"
+      ],
+      "group": "main",
+      "optional": false,
+      "source": "local",
+      "source_detail": {
+        "injected": true,
+        "workspace": "packages/ui"
+      },
+      "version": "0.1.0"
+    },
+    "@testing-library/dom": {
+      "dependencies": [
+        "@adobe/css-tools",
+        "aria-query",
+        "dom-accessibility-api",
+        "lz-string",
+        "pretty-format"
+      ],
+      "group": "dev",
+      "optional": false,
+      "source": "registry",
+      "version": "9.3.4"
+    },
+    "@testing-library/react": {
+      "dependencies": [
+        "@testing-library/dom",
+        "react",
+        "react-dom"
+      ],
+      "group": "dev",
+      "optional": false,
+      "source": "registry",
+      "source_detail": {
+        "peer_suffix_stripped": "(react@18.3.1)(react-dom@18.3.1(react@18.3.1))",
+        "probe_note": "Snapshot key was @testing-library/react@14.3.1(react@18.3.1)(react-dom@18.3.1(react@18.3.1)); Mend UA must strip suffix and report version 14.3.1"
+      },
+      "version": "14.3.1"
+    },
+    "aria-query": {
+      "dependencies": [],
+      "group": "dev",
+      "optional": false,
+      "source": "registry",
+      "version": "5.3.2"
+    },
+    "clsx": {
+      "dependencies": [],
+      "group": "main",
+      "optional": false,
+      "source": "registry",
+      "version": "2.1.1"
+    },
+    "dom-accessibility-api": {
+      "dependencies": [],
+      "group": "dev",
+      "optional": false,
+      "source": "registry",
+      "version": "0.5.16"
+    },
+    "hono": {
+      "dependencies": [],
+      "group": "main",
+      "optional": false,
+      "source": "registry",
+      "version": "4.6.3"
+    },
+    "js-tokens": {
+      "dependencies": [],
+      "group": "main",
+      "optional": false,
+      "source": "registry",
+      "version": "4.0.0"
+    },
+    "loose-envify": {
+      "dependencies": [
+        "js-tokens"
+      ],
+      "group": "main",
+      "optional": false,
+      "source": "registry",
+      "version": "1.4.0"
+    },
+    "lz-string": {
+      "dependencies": [],
+      "group": "dev",
+      "optional": false,
+      "source": "registry",
+      "version": "1.5.0"
+    },
+    "pretty-format": {
+      "dependencies": [
+        "react-is"
+      ],
+      "group": "dev",
+      "optional": false,
+      "source": "registry",
+      "version": "27.5.1"
+    },
+    "react": {
+      "dependencies": [
+        "loose-envify"
+      ],
+      "group": "main",
+      "optional": false,
+      "source": "registry",
+      "version": "18.3.1"
+    },
+    "react-dom": {
+      "dependencies": [
+        "loose-envify",
+        "react",
+        "scheduler"
+      ],
+      "group": "main",
+      "optional": false,
+      "source": "registry",
+      "source_detail": {
+        "peer_suffix_stripped": "(react@18.3.1)",
+        "probe_note": "Snapshot key was react-dom@18.3.1(react@18.3.1); Mend UA must strip suffix and report version 18.3.1"
+      },
+      "version": "18.3.1"
+    },
+    "react-is": {
+      "dependencies": [],
+      "group": "dev",
+      "optional": false,
+      "source": "registry",
+      "version": "17.0.2"
+    },
+    "scheduler": {
+      "dependencies": [
+        "loose-envify"
+      ],
+      "group": "main",
+      "optional": false,
+      "source": "registry",
+      "version": "0.23.2"
+    }
+  },
+  "pm": "pnpm",
+  "pm_version_tested": "12.8.1",
+  "root": {
+    "dependencies": [
+      "@probe/app",
+      "@probe/ui"
+    ],
+    "name": "workspace-peer-dep-injection-probe",
+    "version": "0.0.0"
+  },
+  "schema_version": "1.0",
+  "source_file": "pnpm-lock.yaml",
+  "warnings": [
+    "Workspace probe: @probe/ui is marked injected:true in packages/app. It must appear as source:local (not source:registry) in the expected tree.",
+    "Peer suffix keys in snapshots: @testing-library/react@14.3.1(react@18.3.1)(react-dom@18.3.1(react@18.3.1)) and react-dom@18.3.1(react@18.3.1) \u2014 Mend UA must strip suffix at first '(' to resolve name+version.",
+    "packages/ui devDependencies (@testing-library/react) are included because pnpm workspace importers report all dep groups by default."
+  ]
+}
