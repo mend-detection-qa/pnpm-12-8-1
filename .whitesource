@@ -1,0 +1,9 @@
+{
+  "scanSettings": {
+    "configMode": "AUTO",
+    "versioning": {
+      "node": "20.18.0",
+      "pnpm": "12.8.1"
+    }
+  }
+}
